@@ -45,6 +45,12 @@
             this.Invoke(actionCall);
             return new VoidActionResultTestBuilder(this.TestContext);
         }
+		
+		public IVoidActionResultTestBuilder Action(Expression<Action<TController>> actionCall)
+        {
+            this.Invoke(actionCall);
+            return new VoidActionResultTestBuilder(this.TestContext);
+        }
 
         protected override void ProcessAndValidateMethod(LambdaExpression methodCall, MethodInfo methodInfo)
         {

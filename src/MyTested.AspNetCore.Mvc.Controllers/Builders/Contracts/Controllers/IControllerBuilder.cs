@@ -84,5 +84,7 @@
         /// <param name="actionCall">Method call expression indicating invoked asynchronous void action.</param>
         /// <returns>Test builder of <see cref="IActionResultTestBuilder{TActionResult}"/> type.</returns>
         IVoidActionResultTestBuilder Calling(Expression<Func<TController, Task>> actionCall);
+		
+		IVoidActionResultTestBuilder Action(Expression<Action<TController>> actionCall);
     }
 }
